@@ -156,15 +156,47 @@
 	<script>
 		gsap.registerPlugin(ScrollTrigger);
 
-		gsap.to("#box-left", {
+		const colors = [
+			"#561DB9",
+			"#3B21A0",
+			"#0E123A",
+			"#16263B",
+			"#124CA1",
+			"#012C91",
+			"#00834C"
+		];
+
+		// Create scroll triggers for each section
+		colors.forEach((color, index) => {
+			gsap.fromTo(
+				"#box-left",
+				{ backgroundColor: colors[index - 1] || "#561DB9" }, // Start color
+				{
+					scrollTrigger: {
+						trigger: `#left-${index + 1}`,
+						start: "top center",
+						end: "top center",
+						scrub: true,
+						toggleActions: "play reverse play reverse"
+					},
+					backgroundColor: color
+				}
+			);
+		});
+
+
+		// functions for transition effect in scroll-down
+
+	/*	gsap.to("#box-left", {
 				scrollTrigger: {
 					trigger: "#left-2",
 					start: "top center",
 					end: "top center",
-					scrub: true
+					scrub: true,
+					toggleActions: "play reverse play reverse"
 				},
 				backgroundColor: "#3B21A0",
-				immediateRender: true
+				// immediateRender: true
 			});
 
 		// gsap.fromTo("#box-left",
@@ -188,6 +220,82 @@
 				trigger: "#left-3",
 				start: "top center",
 				end: "top center",
+				scrub: true,
+				toggleActions: "play reverse play reverse"
+			},
+			backgroundColor: "#0E123A",
+			// immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-4",
+				start: "top center",
+				end: "top center",
+				scrub: true,
+				toggleActions: "play reverse play reverse"
+			},
+			backgroundColor: "#16263B",
+			// immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-5",
+				start: "top center",
+				end: "top center",
+				scrub: true,
+				toggleActions: "play reverse play reverse"
+			},
+			backgroundColor: "#124CA1",
+			// immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-6",
+				start: "top center",
+				end: "top center",
+				scrub: true,
+				toggleActions: "play reverse play reverse"
+			},
+			backgroundColor: "#012C91",
+			// immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-7",
+				start: "top center",
+				end: "top center",
+				scrub: true,
+				toggleActions: "play reverse play reverse"
+			},
+			backgroundColor: "#00834C",
+			// immediateRender: true
+		})
+*/
+
+
+
+
+		// functions for transition effect in up-scroll
+/*		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-2",
+				start: "bottom center",
+				end: "bottom center",
+				scrub: true
+			},
+			backgroundColor: "#3B21A0",
+			immediateRender: true
+		});
+		
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-3",
+				start: "bottom center",
+				end: "bottom center",
 				scrub: true
 			},
 			backgroundColor: "#0E123A",
@@ -197,8 +305,8 @@
 		gsap.to("#box-left", {
 			scrollTrigger: {
 				trigger: "#left-4",
-				start: "top center",
-				end: "top center",
+				start: "bottom center",
+				end: "bottom center",
 				scrub: true
 			},
 			backgroundColor: "#16263B",
@@ -208,8 +316,8 @@
 		gsap.to("#box-left", {
 			scrollTrigger: {
 				trigger: "#left-5",
-				start: "top center",
-				end: "top center",
+				start: "bottom center",
+				end: "bottom center",
 				scrub: true
 			},
 			backgroundColor: "#124CA1",
@@ -219,8 +327,8 @@
 		gsap.to("#box-left", {
 			scrollTrigger: {
 				trigger: "#left-6",
-				start: "top center",
-				end: "top center",
+				start: "bottom center",
+				end: "bottom center",
 				scrub: true
 			},
 			backgroundColor: "#012C91",
@@ -230,14 +338,15 @@
 		gsap.to("#box-left", {
 			scrollTrigger: {
 				trigger: "#left-7",
-				start: "top center",
-				end: "top center",
+				start: "bottom center",
+				end: "bottom center",
 				scrub: true
 			},
 			backgroundColor: "#00834C",
 			immediateRender: true
 		})
 
+		// right box
 		gsap.to("#box-right", {
 			scrollTrigger: {
 				trigger: ".container",
@@ -248,7 +357,7 @@
 			backgroundColor: "#141748",
 			immediateRender: true
 		});
-
+*/
 
 	</script>
 </body>
