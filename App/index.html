@@ -5,10 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Task 2</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<style>
 		body {
 			color: white;
 			margin: 0;
+			font-family: sans-serif;
 		}
 
 		.container {
@@ -21,7 +23,7 @@
 		.box {
 			width: 50vw;
 			height: 100%;
-			border: 1px solid #000;
+			border: none;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -35,13 +37,15 @@
 			height: 50px;
 		}
 
-		.box > div {
+		.box>div {
 			height: 100vh;
 			width: 100%;
 			/* background-color: inherit; */
 		}
 
-		#right-1, #right-2, #right-7 {
+		#right-1,
+		#right-2,
+		#right-7 {
 			display: flex;
 			justify-content: space-around;
 		}
@@ -61,10 +65,83 @@
 
 		#organisation-info {
 			position: fixed;
-			bottom: 40px;
+			bottom: 15%;
 			left: 40px;
 			width: 30vw;
 			height: 30vh;
+			color: white;
+		}
+
+		#organisation-info > div > div {
+			position: fixed;
+			bottom: 20%;	
+		}
+
+		.organisation-info--body {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		.organisation-info--remark {
+			/* margin-top: 50px; */
+			position: fixed!important;
+			bottom: 10%!important;
+			padding-top: 40px;
+			box-sizing: border-box;
+			/* margin-bottom: 100px; */
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.organisation-info--remark > a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.organisation-info--remark > img {
+			position: relative;
+			top: 3px;
+			width: 1.4rem;
+		}
+
+		.first-organisation-award {
+			display: flex;
+			background-color: #C5A6E4;
+			color: black;
+			/* width: 70%; */
+			padding: 2rem;
+			border-radius: 0.6rem;
+		}
+		.first-organisation-award > div {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+		.last-organisation-award {
+			display: flex;
+			background-color: white;
+			color: black;
+			/* width: 60%; */
+			padding: 2rem;
+			border-radius: 0.6rem;
+		}
+		.last-organisation-award > div {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+		}
+
+		#skip-button {
+			text-decoration: none;
+			position: fixed;
+			bottom: 8%;
+			left: 43%;
+			width: 70px;
+			height: 30px;
+			color: white;
+			letter-spacing: 0.4rem;
 		}
 
 	</style>
@@ -73,84 +150,15 @@
 <body>
 	<div class="container">
 		<div class="box" id="box-left">
-			<div id="organisation-info">
-				<h1>ifiojio</h1>
-			</div>
-			<div id="left-1">
-				<h1>ABC 123</h1>
-				<div>
-					<span>We are the best web development</span>
-					<span>company in the world</span>
-				</div>
-				<div>
-					View case study
-				</div>
-			</div>
-			<div id="left-2">
-				<h1>ABC 234</h1>
-				<div>
-					<span>We are the best web development</span>
-					<span>company in the world</span>
-				</div>
-				<div>
-					Coming soon
-				</div>
-			</div>
-			<div id="left-3">
-				<h1>ABC 456</h1>
-				<div>
-					<span>We are the best</span>
-					<span>web development company</span>
-					<span>in the world</span>
-				</div>
-				<div>
-					View case study
-				</div>
-			</div>
-			<div id="left-4">
-				<h1>ABC 456</h1>
-				<div>
-					<span>We are the best</span>
-					<span>web development</span>
-					<span>in the world</span>
-				</div>
-				<div>
-					View case study
-				</div>
-			</div>
-			<div id="left-5">
-				<h1>ABC 567</h1>
-				<div>
-					<span>We are the best AR</span>
-					<span>Development company</span>
-					<span>in the world</span>
-				</div>
-				<div>
-					View case study
-				</div>
-			</div>
-			<div id="left-6">
-				<h1>ABC 678</h1>
-				<div>
-					<span>Best since 2017</span>
-					<span>We offer wide range of</span>
-					<span>web development and app development</span>
-				</div>
-				<div>
-					View case study
-				</div>
-			</div>
-			<div id="left-7">
-				<h1>ABC 23478</h1>
-				<div>
-					<span>We are the best</span>
-					<span>web development company</span>
-					<span>in the world</span>
-				</div>
-				<div>
-					Coming soon
-				</div>
-			</div>
+			<div id="organisation-info"></div>
+			<a href="#" id="skip-button">SKIP</a>
+			<div id="left-1"></div>
+			<div id="left-2"></div>
+			<div id="left-3"></div>
+			<div id="left-4"></div>
+			<div id="left-5"></div>
+			<div id="left-6"></div>
+			<div id="left-7"></div>
 		</div>
 		<!-- <img src="assets/circular_ring.svg" alt="Circular Ring" class="ring"> -->
 		<div class="box" id="box-right">
@@ -187,7 +195,6 @@
 		</div>
 	</div>
 
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
 	<script>
@@ -208,37 +215,157 @@
 
 		const objLeft = [
 			{
-				color: "#561DB",
+				color: "#561DB9",
 				orgInfo: `
-				<div>
 					<div id="left-1">
-						<h1>ABC 123</h1>
-					<div>
-						<span>We are the best web development</span>
-						<span>company in the world</span>
+						<div>
+							<div class='first-organisation-award'>
+								<img src=''/>
+								<div>
+									<span>Best Digital Experience</span>
+									<span>World Communication Awards</span>
+								</div>
+							</div>
+							<div class='organisation-info--title'>
+								<h1>ABC 123</h1>
+							</div>
+							<div class='organisation-info--body'>
+								<span>We are the best web development</span>
+								<span>company in the world</span>
+							</div>
+						</div>
+						<div class='organisation-info--remark'>
+							<a href="#">View case study</a>
+							<img src='./assets/arrow-right.svg' />
+						</div>
+					</div>`
+			},
+			{
+				color: "#3B21A0",
+				orgInfo: `
+					<div id="left-2">
+						<div>
+							<div class='organisation-info--title'>
+								<h1>ABC 234</h1>
+							</div>
+							<div class='organisation-info--body'>
+								<span>We are the best web development</span>
+								<span>company in the world</span>
+							</div>
+						</div>
+						<div class='organisation-info--remark'>
+							<span>Coming soon</span>
+						</div>
+					</div>`
+			},
+			{
+				color: "#0E123A",
+				orgInfo: `
+					<div id="left-3">
+						<div>
+							<div class='organisation-info--title'>
+								<h1>ABC 456</h1>
+							</div>
+							<div class='organisation-info--body'>
+								<span>We are the best</span>
+								<span>web development company</span>
+								<span>in the world</span>
+							</div>
+						</div>
+						<div class='organisation-info--remark'>
+							<a href="#">View case study</a>
+							<img src='./assets/arrow-right.svg' />
+						</div>
+					</div>`
+			},
+			{
+				color: "#16263B",
+				orgInfo: `
+					<div id="left-4">
+						<div>
+							<div class='organisation-info--title'>
+								<h1>ABC 456</h1>
+							</div>
+							<div class='organisation-info--body'>
+								<span>We are the best</span>
+								<span>web development company</span>
+								<span>in the world</span>
+							</div>
+						</div>
+						<div class='organisation-info--remark'>
+							<a href="#">View case study</a>
+							<img src='./assets/arrow-right.svg' />
+						</div>
 					</div>
-					<div>
-						View case study
+				`
+			},
+			{
+				color: "#124CA1",
+				orgInfo: `
+					<div id="left-5">
+						<div>
+							<div class='organisation-info--title'>
+								<h1>ABC 567</h1>
+							</div>
+							<div class='organisation-info--body'>
+								<span>We are the best AR</span>
+								<span>Development company</span>
+								<span>in the world</span>
+							</div>
+						</div>
+						<div class='organisation-info--remark'>
+							<a href="#">View case study</a>
+							<img src='./assets/arrow-right.svg' />
+						</div>
 					</div>
-				</div>`
+				`
 			},
 			{
-
+				color: "#012C91",
+				orgInfo: `
+					<div id="left-6">
+						<div>
+							<div class='organisation-info--title'>
+								<h1>ABC 678</h1>
+							</div>
+							<div class='organisation-info--body'>
+								<span>Best since 2017</span>
+								<span>We offer wide range of</span>
+								<span>web development and app development</span>
+							</div>
+						</div>
+						<div class='organisation-info--remark'>
+							<a href="#">View case study</a>
+							<img src='./assets/arrow-right.svg' />
+						</div>
+					</div>
+				`
 			},
 			{
-
-			},
-			{
-
-			},
-			{
-
-			},
-			{
-
-			},
-			{
-
+				color: "#00834C",
+				orgInfo: `
+					<div id="left-7">
+						<div>
+							<div class='last-organisation-award'>
+								<img src=''/>
+								<div>
+									<span>Mobile App of the Year</span>
+									<span>Entrepreneur</span>
+								</div>
+							</div>
+							<div class='organisation-info--title'>
+								<h1>ABC 23478</h1>
+							</div>
+							<div class='organisation-info--body'>
+								<span>We are the best</span>
+								<span>web development company</span>
+								<span>in the world</span>
+							</div>
+						</div>
+						<div class='organisation-info--remark'>
+							<span>Coming soon</span>
+						</div>
+					</div>`
 			}
 		]
 
@@ -252,21 +379,31 @@
 			"#00B769"
 		];
 
-		colorsLeft.forEach((color, index) => {
+		objLeft.forEach((org, index) => {
 			gsap.fromTo(
 				"#box-left",
-				{ backgroundColor: colorsLeft[index - 1] || "#561DB9" },
+				{
+					backgroundColor: objLeft[index - 1] ? objLeft[index - 1].color : "#561DB9",
+				},
 				{
 					scrollTrigger: {
 						trigger: `#left-${index + 1}`,
 						start: "top center",
-						// end: "top center",
 						end: "bottom bottom",
 						scrub: true,
-						toggleActions: "play reverse play reverse"
+						toggleActions: "play reverse play reverse",
 					},
-					backgroundColor: color,
-					
+					backgroundColor: org.color,
+					onStart: () => {
+						$(`#organisation-info`).html(org.orgInfo);
+					},
+					onReverseComplete: () => {
+						if (index > 0) {
+							$(`#organisation-info`).html(objLeft[index - 1].orgInfo);
+						} else {
+							$(`#organisation-info`).html('');
+						}
+					}
 				}
 			);
 		});
