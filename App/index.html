@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scroll Trigger Example</title>
+	<style>
+		body {
+			color: white;
+		}
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			/* height: 200vh; Increased height to allow scrolling */
+		}
+
+		.box {
+			width: 50vw;
+			height: 100%;
+			border: 1px solid #000;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			/* background-color: lightgray; */
+			background-color: inherit;
+		}
+
+		.ring {
+			width: 50px;
+			height: 50px;
+		}
+
+		.box>div {
+			height: 100vh;
+			/* background-color: inherit; */
+		}
+
+		#right-1 {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		#box-right img {
+			height: 60vh;
+			/* width: 50vw; */
+		}
+
+		#box-left {
+			background-color: #561DB9;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="box" id="box-left">Box 1
+			<div id="left-1">
+				<h1>ABC 123</h1>
+				<div>
+					<span>We are the best web development</span>
+					<span>company in the world</span>
+				</div>
+				<div>
+					View case study
+				</div>
+			</div>
+			<div id="left-2">
+				<h1>ABC 234</h1>
+				<div>
+					<span>We are the best web development</span>
+					<span>company in the world</span>
+				</div>
+				<div>
+					Coming soon
+				</div>
+			</div>
+			<div id="left-3">
+				<h1>ABC 456</h1>
+				<div>
+					<span>We are the best</span>
+					<span>web development company</span>
+					<span>in the world</span>
+				</div>
+				<div>
+					View case study
+				</div>
+			</div>
+			<div id="left-4">
+				<h1>ABC 456</h1>
+				<div>
+					<span>We are the best</span>
+					<span>web development</span>
+					<span>in the world</span>
+				</div>
+				<div>
+					View case study
+				</div>
+			</div>
+			<div id="left-5">
+				<h1>ABC 567</h1>
+				<div>
+					<span>We are the best AR</span>
+					<span>Development company</span>
+					<span>in the world</span>
+				</div>
+				<div>
+					View case study
+				</div>
+			</div>
+			<div id="left-6">
+				<h1>ABC 678</h1>
+				<div>
+					<span>Best since 2017</span>
+					<span>We offer wide range of</span>
+					<span>web development and app development</span>
+				</div>
+				<div>
+					View case study
+				</div>
+			</div>
+			<div id="left-7">
+				<h1>ABC 23478</h1>
+				<div>
+					<span>We are the best</span>
+					<span>web development company</span>
+					<span>in the world</span>
+				</div>
+				<div>
+					Coming soon
+				</div>
+			</div>
+		</div>
+		<!-- <img src="assets/circular_ring.svg" alt="Circular Ring" class="ring"> -->
+		<div class="box" id="box-right">Box 2
+
+			<div id="right-1">
+				<img src="assets/nexgtv-entertainment-mobile-app-development.png" />
+				<img src="assets/nexgtv-mobile-app-ui-design.png" />
+			</div>
+			<div id="right-2"></div>
+			<div id="right-3"></div>
+			<div id="right-4"></div>
+			<div id="right-5"></div>
+			<div id="right-6"></div>
+			<div id="right-7"></div>
+		</div>
+	</div>
+
+	<!-- Include GSAP and ScrollTrigger -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+	<script>
+		gsap.registerPlugin(ScrollTrigger);
+
+		gsap.to("#box-left", {
+				scrollTrigger: {
+					trigger: "#left-2",
+					start: "top center",
+					end: "top center",
+					scrub: true
+				},
+				backgroundColor: "#3B21A0",
+				immediateRender: true
+			});
+
+		// gsap.fromTo("#box-left",
+		// 	{
+		// 		backgroundColor: "#561DB",
+		// 		immediateRender: true
+		// 	},
+		// 	{
+		// 		scrollTrigger: {
+		// 			trigger: "#left-2",
+		// 			start: "top center",
+		// 			end: "top center",
+		// 			scrub: true
+		// 		},
+		// 		backgroundColor: "#3B21A0",
+		// 		immediateRender: true
+		// 	});
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-3",
+				start: "top center",
+				end: "top center",
+				scrub: true
+			},
+			backgroundColor: "#0E123A",
+			immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-4",
+				start: "top center",
+				end: "top center",
+				scrub: true
+			},
+			backgroundColor: "#16263B",
+			immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-5",
+				start: "top center",
+				end: "top center",
+				scrub: true
+			},
+			backgroundColor: "#124CA1",
+			immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-6",
+				start: "top center",
+				end: "top center",
+				scrub: true
+			},
+			backgroundColor: "#012C91",
+			immediateRender: true
+		})
+
+		gsap.to("#box-left", {
+			scrollTrigger: {
+				trigger: "#left-7",
+				start: "top center",
+				end: "top center",
+				scrub: true
+			},
+			backgroundColor: "#00834C",
+			immediateRender: true
+		})
+
+		gsap.to("#box-right", {
+			scrollTrigger: {
+				trigger: ".container",
+				start: "top center",
+				end: "bottom center",
+				scrub: true
+			},
+			backgroundColor: "#141748",
+			immediateRender: true
+		});
+
+
+	</script>
+</body>
+
+</html>
