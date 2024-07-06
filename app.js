@@ -9,14 +9,14 @@ $(document).ready(function() {
         console.log('highlightNode called',index)
 
         // highlight path
-        const transparentRing = document.querySelector("#Transparent_Ring");
-        const pathLength = transparentRing.getTotalLength();
-        const start = pathLength * (index / 7);
-        const end = pathLength * ((index + 1) / 7);
-
-        transparentRing.style.strokeDasharray = `${end - start} ${pathLength}`;
-        transparentRing.style.strokeDashoffset = start;
-        transparentRing.style.stroke = "red";
+        // const transparentRing = document.querySelector("#Transparent_Ring");
+        // const pathLength = transparentRing.getTotalLength();
+        // const start = pathLength * (index / 7);
+        // const end = pathLength * ((index + 1) / 7);
+        //
+        // transparentRing.style.strokeDasharray = `${end - start} ${pathLength}`;
+        // transparentRing.style.strokeDashoffset = start;
+        // transparentRing.style.stroke = "red";
 
         // highlight nodes
         svgNodes.forEach((node,nodeIndex) => {
@@ -49,7 +49,7 @@ $(document).ready(function() {
                 backgroundColor: org.color,
                 onStart: () => {
                     highlightNode(index)
-                    $('#Opaque_Ring').css("fill", org.color)
+                    // $('#Opaque_Ring').css("fill", org.color)
                     $(`#organisation-info`).html(org.orgInfo);
                 },
                 onComplete: ()=> {
