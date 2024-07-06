@@ -13,6 +13,10 @@ const objLeft = [
         color: "#561DB9",
         orgInfo: `
 					<div class="left-content">
+						<div class="page-title">
+							<h1>25M+ Downloads</h1>
+							<p>on appstore & google playstore</p>
+						</div>
 						<div>
 							<img src="./assets/world-communication-awards-for-best-digital-experience.png" />
 							<div class='organisation-info-title'>
@@ -33,6 +37,11 @@ const objLeft = [
         color: "#3B21A0",
         orgInfo: `
 					<div class="left-content">
+						<div class="page-title">
+							<p>The Next</p>
+							<h1>Blockchain</h1>
+							<p>Revolution</p>
+						</div>
 						<div>
 							<div class='organisation-info-title'>
 								<h1>ABC 234</h1>
@@ -51,6 +60,11 @@ const objLeft = [
         color: "#0E123A",
         orgInfo: `
 					<div class="left-content">
+						<div class="page-title">
+							<p>Redefining</p>
+							<h1>UX Strategy</h1>
+							<p>and UI design</p>
+						</div>
 						<div>
 							<div class='organisation-info-title'>
 								<h1>ABC 345	</h1>
@@ -71,6 +85,11 @@ const objLeft = [
         color: "#16263B",
         orgInfo: `
 					<div class="left-content">
+						<div class="page-title">
+							<p>Redefining</p>
+							<h1>UX Strategy</h1>
+							<p>and UI design</p>
+						</div>
 						<div>
 							<div class='organisation-info-title'>
 								<h1>ABC 456</h1>
@@ -92,6 +111,10 @@ const objLeft = [
         color: "#124CA1",
         orgInfo: `
 					<div class="left-content">
+						<div class="page-title">
+							<h1>25M+ Downloads</h1>
+							<p>on appstore & google playstore</p>
+						</div>
 						<div>
 							<div class='organisation-info-title'>
 								<h1>ABC 567</h1>
@@ -113,6 +136,11 @@ const objLeft = [
         color: "#012C91",
         orgInfo: `
 					<div class="left-content">
+						<div class="page-title">
+							<p>Developing ERP Solution for</p>
+							<h1>Text Headline</h1>
+							<p>in furniture industry</p>
+						</div>
 						<div>
 							<div class='organisation-info-title'>
 								<h1>ABC 678</h1>
@@ -134,6 +162,11 @@ const objLeft = [
         color: "#00834C",
         orgInfo: `
 					<div class="left-content">
+						<div class="page-title">
+							<p>Redefining</p>
+							<h1>UX Strategy</h1>
+							<p>and UI design</p>
+						</div>
 						<div>
 							<img src="./assets/mobile-app-of-the-year-by-entrepreneur.png" />
 							<div class='organisation-info-title'>

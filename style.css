@@ -271,3 +271,10 @@ body {
 	width: 200px;
 	height: 200px;
 }
+
+.page-title {
+	position: fixed;
+	color: white;
+	left: 35%;
+	top: 20%
+}
