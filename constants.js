@@ -14,13 +14,7 @@ const objLeft = [
         orgInfo: `
 					<div class="left-content">
 						<div>
-							<div class='first-organisation-award'>
-								<img src=''/>
-								<div>
-									<span>Best Digital Experience</span>
-									<span>World Communication Awards</span>
-								</div>
-							</div>
+							<img src="./assets/world-communication-awards-for-best-digital-experience.png" />
 							<div class='organisation-info-title'>
 								<h1>ABC 123</h1>
 							</div>
@@ -59,7 +53,7 @@ const objLeft = [
 					<div class="left-content">
 						<div>
 							<div class='organisation-info-title'>
-								<h1>ABC 456</h1>
+								<h1>ABC 345	</h1>
 							</div>
 							<div class='organisation-info-body'>
 								<span>We are the best</span>
@@ -141,13 +135,7 @@ const objLeft = [
         orgInfo: `
 					<div class="left-content">
 						<div>
-							<div class='last-organisation-award'>
-								<img src=''/>
-								<div>
-									<span>Mobile App of the Year</span>
-									<span>Entrepreneur</span>
-								</div>
-							</div>
+							<img src="./assets/mobile-app-of-the-year-by-entrepreneur.png" />
 							<div class='organisation-info-title'>
 								<h1>ABC 23478</h1>
 							</div>
@@ -168,7 +156,7 @@ const objRight = [
     {
         color: "#CCCCCE",
         orgImg: `
-                    <div class="right-content">
+                    <div class="right-content" id="right-content-1">
                         <img src="assets/nexgtv-entertainment-mobile-app-development.png" alt="nexgtv-entertainment" />
                         <img src="assets/nexgtv-mobile-app-ui-design.png" alt="nexgtv-mobile-app" />
                     </div>`
@@ -176,7 +164,7 @@ const objRight = [
     {
         color: "#1C0362",
         orgImg: `
-                    <div class="right-content">
+                    <div class="right-content" id="right-content-2">
                         <img src="assets/veme-blockchain-app-developed.png" alt="veme-blockchain-app" />
                         <img src="assets/veme-app-ui-design.png" alt="veme-app-ui-design" />
                     </div>`
@@ -184,7 +172,7 @@ const objRight = [
     {
         color: "#141748",
         orgImg: `
-                    <div class="right-content">
+                    <div class="right-content" id="right-content-3">
                         <img src="assets/nasa-fitness-tracking-mobile-app.png" alt="nasa-fitness-tracking-mobile-app" />
                         <img src="assets/measure-total-body-weight-through-fitness-app.png" alt="measure-total-body-weight-through-fitness-app" />
                     </div>`
@@ -192,16 +180,16 @@ const objRight = [
     {
         color: "#0D131B",
         orgImg: `
-                    <div class="right-content">
-                        <img src="assets/pizza_box.png" alt="pizza_box" />
-                        <img src="assets/domi-img1.png" alt="dominos" />
-                        <img src="assets/ux-strategy-for-mobile-app-devlopment.png" alt="ux-strategy" />
-                    </div>`
+                    <div class="right-content" id="right-content-4">
+												<img src="assets/domi-img1.png" alt="dominos" />
+												<img src="assets/ux-strategy-for-mobile-app-devlopment.png" alt="ux-strategy" />
+                      	<img src="assets/pizza_box.png" alt="pizza_box" />
+										</div>`
     },
     {
         color: "#28C9D8",
         orgImg: `
-                    <div class="right-content">
+                    <div class="right-content" id="right-content-5">
                         <img src="assets/karavan-social-networking-app-screen.png" alt="karavan-social-networking" />
                         <img src="assets/social-networking-app-case-study.png" alt="social-networking-app" />
                         <img src="assets/developers-for-social-media-app.png" alt="developers-for-social-media-app" />
@@ -210,14 +198,14 @@ const objRight = [
     {
         color: "#000000",
         orgImg: `
-                    <div class="right-content">
+                    <div class="right-content" id="right-content-6">
                         <img src="assets/erp-app-development-service.png" alt="erp-app-development-service" />
                     </div>`
     },
     {
         color: "#00B769",
         orgImg: `
-                    <div class="right-content">
+                    <div class="right-content" id="right-content-7">
                         <img src="assets/melltoo-img2.png" alt="melltoo-img2" />
                         <img src="assets/melltoo-img1.png" alt="melltoo-img1" />
                     </div>`
