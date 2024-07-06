@@ -1,0 +1,136 @@
+body {
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 200vh; */
+}
+
+.box {
+    width: 50vw;
+    height: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: lightgray; */
+    background-color: inherit;
+}
+
+.ring {
+    width: 50px;
+    height: 50px;
+}
+
+.box>div {
+    height: 100vh;
+    width: 100%;
+    /* background-color: inherit; */
+}
+
+#right-1,
+#right-2,
+#right-7 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#box-right img {
+    height: 60vh;
+    /* width: 50vw; */
+}
+
+#box-left {
+    background-color: #561DB9;
+}
+
+#box-right {
+    background-color: #CCCCCE;
+}
+
+#organisation-info {
+    position: fixed;
+    bottom: 15%;
+    left: 40px;
+    width: 30vw;
+    height: 30vh;
+    color: white;
+}
+
+#organisation-info > div > div {
+    position: fixed;
+    bottom: 20%;
+}
+
+.organisation-info--body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.organisation-info--remark {
+    /* margin-top: 50px; */
+    position: fixed!important;
+    bottom: 10%!important;
+    padding-top: 40px;
+    box-sizing: border-box;
+    /* margin-bottom: 100px; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.organisation-info--remark > a {
+    text-decoration: none;
+    color: white;
+}
+
+.organisation-info--remark > img {
+    position: relative;
+    top: 3px;
+    width: 1.4rem;
+}
+
+.first-organisation-award {
+    display: flex;
+    background-color: #C5A6E4;
+    color: black;
+    /* width: 70%; */
+    padding: 2rem;
+    border-radius: 0.6rem;
+}
+.first-organisation-award > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.last-organisation-award {
+    display: flex;
+    background-color: white;
+    color: black;
+    /* width: 60%; */
+    padding: 2rem;
+    border-radius: 0.6rem;
+}
+.last-organisation-award > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#skip-button {
+    text-decoration: none;
+    position: fixed;
+    bottom: 8%;
+    left: 43%;
+    width: 70px;
+    height: 30px;
+    color: white;
+    letter-spacing: 0.4rem;
+}
